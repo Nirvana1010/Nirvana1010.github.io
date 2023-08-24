@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yuhan's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/bbd59d72a0.js"
       crossorigin="anonymous"
@@ -14,15 +24,17 @@
   <body>
     <div id="header">
       <div class="container">
-        <nav>
-          <img src="images/logo.png" alt="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+        <nav id="header-top">
+          <img src="images/logo1.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Experiences</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Software Engineer</p>
@@ -35,15 +47,25 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="images/user.png" alt="" />
+            <img src="images/user1.jpeg" alt="" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-              veritatis deserunt et fugiat aperiam aliquam? Rem quas voluptatem
-              quaerat in magnam ipsum hic, officiis, sint autem quasi tempora id
-              vel.
+              I practiced in
+              <span class="highlight"> software development processes </span>
+              and insights through software implementation, test automation and
+              next-generation development. Skilled in contributing to the design
+              of advanced technical and methodological projects in end-to-end
+              execution.
+              <br />
+              As a software engineer, I effectively leverage my
+              <span class="highlight"> data science </span>
+              background to bridge the gap between data insights and practical
+              software implementation. My proficiency in full-stack web
+              development and cloud computing platforms enables me to deliver
+              scalable and reliable software solutions that cater to real-world
+              business needs.
             </p>
             <div class="tab-title">
               <p class="tab-links active-link" onclick="opentab('skills')">
@@ -56,23 +78,50 @@
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI?UX</span><br />Designing Web</li>
-                <li><span>Web Development</span><br />Designing Web</li>
-                <li><span>APP Development</span><br />Designing Web</li>
+                <li>
+                  <span>Backend Development</span><br />Build robust and
+                  scalable server-side applications
+                </li>
+                <li>
+                  <span>Frontend Development</span><br />Web App Development via
+                  MERN Framework
+                </li>
+                <li>
+                  <span>Data Science/Deep Learning</span><br />Create SoTA model
+                  to solve CV/NLP problems
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>2021-Current</span><br />Student</li>
-                <li><span>2021-Current</span><br />Student</li>
-                <li><span>2021-Current</span><br />Student</li>
+                <li>
+                  <span>May 2023 - Aug 2023</span><br />Research Engineer Intern
+                  @ Tencent
+                </li>
+                <li>
+                  <span>May 2022 - Aug 2022</span><br />Machine Learning
+                  Engineer Intern @ Coca Cola
+                </li>
+                <li>
+                  <span>May 2021 - Aug 2021</span><br />Data Science Intern @
+                  ByteDance
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>2024</span><br />Master of Data Science</li>
-                <li><span>2024</span><br />Master of Data Science</li>
-                <li><span>2024</span><br />Master of Data Science</li>
+                <li>
+                  <span>May, 2024</span><br />Master of Data Science @ Rice
+                  University
+                </li>
+                <li>
+                  <span>Aug, 2022</span><br />MS in Business Analytics @ The
+                  University of Hong Kong
+                </li>
+                <li>
+                  <span>Jun, 2021</span><br />B.Eng in Computer Science @ Nankai
+                  University
+                </li>
               </ul>
             </div>
           </div>
@@ -83,40 +132,65 @@
     <!-- services -->
     <div id="services">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title">Experiences</h1>
         <div class="services-list">
           <div>
             <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
+            <h2>Research Engineer Intern</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              exercitationem ut quidem amet. Similique repudiandae doloribus
-              magni nisi inventore, voluptatibus vero voluptates placeat cum
-              accusamus, magnam quaerat voluptatem, illum sint.
+              Leveraging cutting-edge techniques, designed and implemented
+              models to tackle complex
+              <span class="highlight">
+                computer vision (CV) and natural language processing (NLP)
+              </span>
+              problems. Adept at data preprocessing, model training, and
+              performance evaluation. Proposed a foundation model for
+              <span class="highlight">
+                video-text retrieval and video captioning </span
+              >, achieving over
+              <span class="highlight"> 3% improvement </span> for both tasks
+              compared to SOTA baselines.
             </p>
-            <a href="#">learn more</a>
+            <br />
+            <p>
+              <span class="highlight"> Output: </span> 2 research publications
+              (first author) accepted by ICCVW, 2023.
+            </p>
+            <a href="#services">Python, PyTorch, Git, Docker, Shell</a>
           </div>
           <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>UI Design</h2>
+            <!-- <i class="fa-solid fa-lightbulb"></i> -->
+            <i class="fa-regular fa-object-ungroup"></i>
+            <h2>Machine Learning Engineer Intern</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              exercitationem ut quidem amet. Similique repudiandae doloribus
-              magni nisi inventore, voluptatibus vero voluptates placeat cum
-              accusamus, magnam quaerat voluptatem, illum sint.
+              Built a PySpark-based framework on
+              <span class="highlight"> Microsoft Azure </span> for evaluating
+              the vending machine business. Used a modified RFM model and
+              <span class="highlight"> clustering </span> techniques to assess
+              product value and customer behavior. Proposed an
+              <span class="highlight"> ML-based stacking model </span> for
+              product-equipment matching that
+              <span class="highlight"> increased sales by 5% </span>. Led and
+              motivated the project team to ensure smooth client collaboration.
             </p>
-            <a href="#">learn more</a>
+            <a href="#services">PySpark, Python, Azure</a>
           </div>
           <div>
-            <i class="fa-brands fa-app-store-ios"></i>
-            <h2>APP Design</h2>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h2>Data Science Intern</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              exercitationem ut quidem amet. Similique repudiandae doloribus
-              magni nisi inventore, voluptatibus vero voluptates placeat cum
-              accusamus, magnam quaerat voluptatem, illum sint.
+              Conducted data manipulation and analysis using
+              <span class="highlight"> Python and SQL </span>. Utilized
+              <span class="highlight"> Tableau </span>
+              for visualizing and reporting on sales trends. Worked
+              collaboratively with a team of three to develop and implement new
+              <span class="highlight"> data-driven business strategies </span>,
+              which involved expanding sales channels through partnerships,
+              resulting in a significant
+              <span class="highlight"> 10% improvement </span> in monthly sales
+              performance.
             </p>
-            <a href="#">learn more</a>
+            <a href="#services">SQL, Python, Tableau</a>
           </div>
         </div>
       </div>
@@ -125,7 +199,327 @@
     <!-- About -->
     <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list active-list">
+          <div class="work">
+            <img src="images/work-1.jpeg" alt="" />
+            <div class="layer">
+              <h3>SpotsPedia</h3>
+              <p>
+                Created a travel-focused website allowing users to search and
+                share travel information. Optimized
+                <span class="bold">MongoDB</span> database for speed and
+                integrity, resulting in faster responses and improved stability.
+                Implemented secure <span class="bold">JWT</span> authentication,
+                reducing security incidents by <span class="bold">35%</span>,
+                and used <span class="bold">Express.js</span> to boost API
+                performance by <span class="bold">45%</span> for higher traffic.
+                Leveraged <span class="bold">Node.js</span> for efficient
+                server-side apps, achieving a
+                <span class="bold">20%</span> performance increase. Integrated
+                <span class="bold">AI recommendations</span> for personalized
+                travel spots, increasing satisfaction by
+                <span class="bold">30%</span>.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: MongoDB, Express.js,
+                React, Node.js, Javascript, Python, HTML5/CSS3
+              </span>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-6.jpeg" alt="" />
+            <div class="layer">
+              <h3>SOSO Store</h3>
+              <p>
+                Developed a Java Web application utilizing the
+                <span class="bold"
+                  >SSM framework (Spring, Spring MVC, MyBatis)</span
+                >
+                to simulate a mobile service provider's business.
+                <span class="bold">Git</span> was employed for version control
+                and collaborative team efforts. Core functionalities included
+                user account management, and bill calculation etc., with
+                integration to a <span class="bold">MySQL database</span> for
+                data persistence and
+                <span class="bold">JSP web services</span> for data
+                manipulation. The application's architecture was structured
+                using the
+                <span class="bold"
+                  >Spring Model-View-Controller (MVC) pattern</span
+                >, with components like users, and devices modeled based on
+                <span class="bold"
+                  >object-oriented programming (OOP) principles</span
+                >.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Spring, Spring MVC,
+                MyBatis, MySQL, Java, Git, OOP
+              </span>
+              <a href="https://github.com/Nirvana1010/SoSo-Store"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.jpeg" alt="" />
+            <div class="layer">
+              <h3>Efficient Video-Text Understanding</h3>
+              <p>
+                Pre-trained models enhance video-text understanding, but scaling
+                fine-tuning is costly. We propose
+                <span class="bold">AGAdapter</span> to efficiently adapt
+                video-text tasks, which includes alignment and generation
+                adapters for detailed multi-modal interactions and captioning.
+                We further introduce
+                <span class="bold">instruction joint tuning</span> for
+                generating comprehensive descriptions. AGAdapter excels in tasks
+                like video-text retrieval and captioning, demostrating its
+                superior on MSR-VTT and ActivityNet benchmarks by
+                <span class="bold">3% improvement</span> compared to SoTA.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Deep Learning,
+                PyTorch, Docker, Shell, Git, Python
+              </span>
+              <a href="images/12.pdf"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd rows -->
+        <div class="work-list work-list-more">
+          <div class="work">
+            <img src="images/work-3.jpeg" alt="" />
+            <div class="layer">
+              <h3>Music Genre Classification</h3>
+              <p>
+                We propose an innovative music genre classification method that
+                achieved accuracy improvement and efficiency enhancement. The
+                method employed a <span class="bold">multi-modal</span> approach
+                by combining Mel-spectrograms and augmented MFCCs as input,
+                resulting in a <span class="bold">10% accuracy boost</span>.
+                Additionally, model efficiency was increased by
+                <span class="bold">20%</span> through the implementation of
+                <span class="bold">pruning and knowledge distillation</span>
+                techniques for model size reduction. To facilitate user
+                interaction with the model, a
+                <span class="bold">user-friendly website</span> was designed and
+                built using <span class="bold">Flask and JavaScript</span>.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Python, Javascript,
+                PyTorch, Flask
+              </span>
+              <a
+                href="https://github.com/Nirvana1010/Music-Genre-Classification"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-4.jpeg" alt="" />
+            <div class="layer">
+              <h3>Place The Right Product to The Right Equipment</h3>
+              <p>
+                A novel evaluation approach was introduced to assess product
+                value by considering
+                <span class="bold">Steadiness-Frequency-Monetary</span> factors.
+                Furthermore, an
+                <span class="bold">enhanced K-means clustering</span> was used
+                to categorize vending machines for infering consumer behavior.
+                In the context of product recommendation, a
+                <span class="bold">machine learning-driven stacking model</span>
+                effectively matched high-value products with appropriate vending
+                machines according to consumer behavior patterns. This
+                initiative resulted in a significant
+                <span class="bold">5% sales increase</span> for Coca-Cola's
+                real-world operations.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Machine Learning,
+                Microsoft Azure, PySpark, Python, SQL, Tableau
+              </span>
+              <br />
+              <span class="footnote">
+                *Code and report cannot be released due to confidential
+                information.
+              </span>
+              <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-5.jpeg" alt="" />
+            <div class="layer">
+              <h3>CLIP-based models for Image Captioning</h3>
+              <p>
+                Developed two efficient
+                <span class="bold">CLIP-based image captioning</span> models
+                that outperformed competitors with quicker training. The first
+                approach employed CLIP object descriptions for input and FlanT5
+                for caption generation, achieving top-notch captions
+                <span class="bold">without training</span>. The second method
+                utilized CLIP image features and text embeddings to fine-tune a
+                pretrained GPT-2 model, achieving a
+                <span class="bold">4-fold reduction in training time</span>
+                compared to baselines while maintaining caption quality.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Deep Learning,
+                PyTorch, Python
+              </span>
+              <a
+                href="https://github.com/Nirvana1010/CLIP-based-Image-Captioning"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd rows -->
+        <div class="work-list work-list-more">
+          <div class="work">
+            <img src="images/work-7.jpeg" alt="" />
+            <div class="layer">
+              <h3>So Todo - Android APP for Time Management</h3>
+              <p>
+                Boost productivity with our cutting-edge Android app designed
+                for <span class="bold">efficient time management</span>. We
+                integrated the <span class="bold">Pomodoro Technique</span>,
+                which guides you through focused work intervals and breaks for
+                enhanced concentration. Built in
+                <span class="bold">Android Studio using Java</span>, the app
+                offers intuitive task management and employs structured
+                planning. Its standout feature is flawless
+                <span class="bold">calendar synchronization</span>, minimizing
+                scheduling conflicts and offering a comprehensive view of
+                engagements. Enjoy disciplined work sessions and synchronized
+                and organized schedules in one application, elevating your
+                productivity.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: Android Development,
+                Java, Git
+              </span>
+              <a href="https://github.com/Nirvana1010/So-Todo"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-8.jpeg" alt="" />
+            <div class="layer">
+              <h3>Parallel Optimization for KNN</h3>
+              <p>
+                Totackles the challenge of prolonged running times in the
+                <span class="bold">k-Nearest Neighbor (KNN) algorithm</span> as
+                datasets grow larger, we propose a parallel approach that
+                optimizes distance calculation and sorting using techniques like
+                SIMD, loop unrolling, and multithreading. The strategy also
+                <span class="bold"
+                  >minimizes I/O latencies and incorporates parallel odd-even
+                  and merge sort</span
+                >
+                for distance sorting. Experimental results show that our
+                parallel KNN significantly reduces computation time while
+                maintaining classification accuracy, offering an
+                <span class="bold">4-times efficient</span> solution for larger
+                datasets in KNN applications.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: C++, Parallel
+                Programming, Multi-threading, KNN, Sorting Algorithm
+              </span>
+              <a
+                href="https://github.com/Nirvana1010/Parallel-Optimization-for-KNN-Algorithm"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-9.jpeg" alt="" />
+            <div class="layer">
+              <h3>Full-System Simulator for X86 CPU</h3>
+              <p>
+                Developed a robust
+                <span class="bold">Linux-based emulator using C</span> that
+                facilitates the execution of x86 software by emulating the
+                necessary <span class="bold">hardware components</span>,
+                including I/O devices. Leveraging advanced concepts like
+                <span class="bold"
+                  >file system integration and memory management</span
+                >, the emulator offers a high-fidelity platform for running x86
+                software. Rigorous
+                <span class="bold">testing and performance optimization</span>
+                ensure its stability and efficiency, providing a reliable
+                environment for seamless x86 software execution.
+              </p>
+              <br />
+              <span class="foot-skills">
+                <i class="fa-solid fa-wrench"></i> Skills: System Design, Linux,
+                Git, C
+              </span>
+              <a href="https://github.com/Nirvana1010/ICS2018---System-Design"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-more" id="see-more" onclick="expandlists()">
+          See more
+        </button>
+      </div>
+    </div>
+    <!-- Contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> yuhanwei10@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 281-710-2383</p>
+            <div class="social-icons">
+              <a href="https://github.com/Nirvana1010"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/yuhanwei1010/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <a href="images/CV_Yuhan_Wei.pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Yuhan Wei</p>
       </div>
     </div>
 
@@ -142,6 +536,66 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
+    </script>
+
+    <script>
+      var servicelists = document.getElementsByClassName("services-list");
+      for (service of servicelists) {
+      }
+    </script>
+
+    <script>
+      var worklists = document.getElementsByClassName("work-list-more");
+      var btntext = document.getElementById("see-more");
+      function expandlists() {
+        if (btntext.classList.contains("btn-more")) {
+          for (worklist of worklists) {
+            worklist.style.display = "grid";
+          }
+          btntext.innerHTML = "See less";
+          btntext.classList.remove("btn-more");
+          btntext.classList.add("btn-less");
+        } else {
+          for (worklist of worklists) {
+            worklist.style.display = "none";
+          }
+          btntext.innerHTML = "See more";
+          btntext.classList.remove("btn-less");
+          btntext.classList.add("btn-more");
+        }
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxsLCd_FfdOZe7jDhMKseV3Db2rR_VpKtbbiozzdGdXpYVEkks-xTIs004nP8NxQCQ2/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
