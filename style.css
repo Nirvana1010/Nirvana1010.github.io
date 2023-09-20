@@ -450,6 +450,12 @@ nav .fa-solid{
         font-size: 40px;
     }
 
+    .work img{
+        width: 110%;
+        height: auto;
+        aspect-ratio: 3/6;
+    }
+
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
